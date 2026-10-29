@@ -17,7 +17,8 @@ kotlin {
 dependencies {
     api(libs.kotlinx.coroutines.core)
     api(libs.kotlinx.serialization.json)
-    implementation(libs.okhttp)
+    // api: HttpAccessAIBackend accepts a custom OkHttpClient.
+    api(libs.okhttp)
 
     testImplementation(kotlin("test"))
     testImplementation(libs.junit.jupiter)
